@@ -40,7 +40,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
           ),
         ),
         title: Text(
-          'Change Password',
+          FFLocalizations.of(context).getText(
+            'gzezrooz' /* Change Password */,
+          ),
           style: FlutterFlowTheme.title2,
         ),
         actions: [],
@@ -57,7 +59,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
               controller: phoneNumberController,
               obscureText: false,
               decoration: InputDecoration(
-                labelText: 'Enter your email',
+                labelText: FFLocalizations.of(context).getText(
+                  'gdpnyu1u' /* Enter your email */,
+                ),
                 labelStyle: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
                   color: FlutterFlowTheme.grayIcon,
@@ -103,7 +107,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    'We will send you an email with a link to reset your password, please enter the email associated with your account above.',
+                    FFLocalizations.of(context).getText(
+                      '8zibi18a' /* We will send you an email with... */,
+                    ),
                     style: FlutterFlowTheme.bodyText1,
                   ),
                 ),
@@ -129,7 +135,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                   context: context,
                 );
               },
-              text: 'Send Reset Link',
+              text: FFLocalizations.of(context).getText(
+                'qg5nvvqy' /* Send Reset Link */,
+              ),
               options: FFButtonOptions(
                 width: 200,
                 height: 50,

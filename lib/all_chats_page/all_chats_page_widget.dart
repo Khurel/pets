@@ -26,7 +26,9 @@ class _AllChatsPageWidgetState extends State<AllChatsPageWidget> {
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         title: Text(
-          'Messages',
+          FFLocalizations.of(context).getText(
+            '7ufrprq7' /* Messages */,
+          ),
           style: FlutterFlowTheme.title2,
         ),
         actions: [],
@@ -89,56 +91,82 @@ class _AllChatsPageWidgetState extends State<AllChatsPageWidget> {
                 itemBuilder: (context, listViewIndex) {
                   final listViewChatsRecord =
                       listViewChatsRecordList[listViewIndex];
-                  return StreamBuilder<FFChatInfo>(
-                    stream: FFChatManager.instance
-                        .getChatInfo(chatRecord: listViewChatsRecord),
+                  return StreamBuilder<List<ChatsRecord>>(
+                    stream: queryChatsRecord(
+                      queryBuilder: (chatsRecord) => chatsRecord
+                          .where('users', arrayContains: currentUserReference)
+                          .orderBy('last_message_time', descending: true),
+                    ),
                     builder: (context, snapshot) {
-                      final chatInfo =
-                          snapshot.data ?? FFChatInfo(listViewChatsRecord);
-                      return FFChatPreview(
-                        onTap: chatInfo != null
-                            ? () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => ChatPageWidget(
-                                      chatUser: chatInfo.otherUsers.length == 1
-                                          ? chatInfo.otherUsersList.first
-                                          : null,
-                                      chatRef: chatInfo.chatRecord.reference,
-                                    ),
-                                  ),
-                                )
-                            : null,
-                        lastChatText: chatInfo.chatPreviewMessage(),
-                        lastChatTime: listViewChatsRecord.lastMessageTime,
-                        seen: listViewChatsRecord.lastMessageSeenBy
-                            .contains(currentUserReference),
-                        title: chatInfo.chatPreviewTitle(),
-                        userProfilePic: chatInfo.chatPreviewPic(),
-                        color: FlutterFlowTheme.tertiaryColor,
-                        unreadColor: FlutterFlowTheme.primaryColor,
-                        titleTextStyle: GoogleFonts.getFont(
-                          'Lexend Deca',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                          fontStyle: FontStyle.normal,
-                        ),
-                        dateTextStyle: GoogleFonts.getFont(
-                          'Lexend Deca',
-                          color: FlutterFlowTheme.grayIcon,
-                          fontWeight: FontWeight.normal,
-                          fontSize: 14,
-                        ),
-                        previewTextStyle: GoogleFonts.getFont(
-                          'Lexend Deca',
-                          color: FlutterFlowTheme.grayIcon,
-                          fontWeight: FontWeight.normal,
-                          fontSize: 14,
-                        ),
-                        contentPadding:
-                            EdgeInsetsDirectional.fromSTEB(12, 3, 3, 3),
-                        borderRadius: BorderRadius.circular(0),
+                      // Customize what your widget looks like when it's loading.
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: SizedBox(
+                            width: 50,
+                            height: 50,
+                            child: CircularProgressIndicator(
+                              color: FlutterFlowTheme.primaryColor,
+                            ),
+                          ),
+                        );
+                      }
+                      List<ChatsRecord> chatPreviewChatsRecordList =
+                          snapshot.data;
+                      return StreamBuilder<FFChatInfo>(
+                        stream: FFChatManager.instance
+                            .getChatInfo(chatRecord: listViewChatsRecord),
+                        builder: (context, snapshot) {
+                          final chatInfo =
+                              snapshot.data ?? FFChatInfo(listViewChatsRecord);
+                          return FFChatPreview(
+                            onTap: chatInfo != null
+                                ? () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ChatPageWidget(
+                                          chatUser:
+                                              chatInfo.otherUsers.length == 1
+                                                  ? chatInfo
+                                                      .otherUsersList.first
+                                                  : null,
+                                          chatRef:
+                                              chatInfo.chatRecord.reference,
+                                        ),
+                                      ),
+                                    )
+                                : null,
+                            lastChatText: chatInfo.chatPreviewMessage(),
+                            lastChatTime: listViewChatsRecord.lastMessageTime,
+                            seen: listViewChatsRecord.lastMessageSeenBy
+                                .contains(currentUserReference),
+                            title: chatInfo.chatPreviewTitle(),
+                            userProfilePic: chatInfo.chatPreviewPic(),
+                            color: FlutterFlowTheme.tertiaryColor,
+                            unreadColor: FlutterFlowTheme.primaryColor,
+                            titleTextStyle: GoogleFonts.getFont(
+                              'Lexend Deca',
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              fontStyle: FontStyle.normal,
+                            ),
+                            dateTextStyle: GoogleFonts.getFont(
+                              'Lexend Deca',
+                              color: FlutterFlowTheme.grayIcon,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 14,
+                            ),
+                            previewTextStyle: GoogleFonts.getFont(
+                              'Lexend Deca',
+                              color: FlutterFlowTheme.grayIcon,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 14,
+                            ),
+                            contentPadding:
+                                EdgeInsetsDirectional.fromSTEB(12, 3, 3, 3),
+                            borderRadius: BorderRadius.circular(0),
+                          );
+                        },
                       );
                     },
                   );

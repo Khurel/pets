@@ -61,7 +61,9 @@ class _EditUserProfileWidgetState extends State<EditUserProfileWidget> {
               },
             ),
             title: Text(
-              'Your Profile',
+              FFLocalizations.of(context).getText(
+                'lfw6npot' /* Your Profile */,
+              ),
               style: FlutterFlowTheme.title2,
             ),
             actions: [],
@@ -85,7 +87,9 @@ class _EditUserProfileWidgetState extends State<EditUserProfileWidget> {
                           children: [
                             Expanded(
                               child: Text(
-                                'Fill out your profile now in order to complete setup of your profile.',
+                                FFLocalizations.of(context).getText(
+                                  'qjrq67b4' /* Fill out your profile now in o... */,
+                                ),
                                 style: FlutterFlowTheme.bodyText1,
                               ),
                             ),
@@ -155,7 +159,10 @@ class _EditUserProfileWidgetState extends State<EditUserProfileWidget> {
                                 ),
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Your Name',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'xkxomt4e' /* Your Name */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.subtitle1,
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
@@ -200,7 +207,10 @@ class _EditUserProfileWidgetState extends State<EditUserProfileWidget> {
                                   ),
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'UserName',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      'act7cuqz' /* UserName */,
+                                    ),
                                     labelStyle: FlutterFlowTheme.bodyText1,
                                     enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
@@ -247,7 +257,10 @@ class _EditUserProfileWidgetState extends State<EditUserProfileWidget> {
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelStyle: FlutterFlowTheme.bodyText1,
-                                    hintText: 'Your Bio',
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      '0mv7ilkd' /* Your Bio */,
+                                    ),
                                     hintStyle: FlutterFlowTheme.bodyText1,
                                     enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
@@ -304,7 +317,9 @@ class _EditUserProfileWidgetState extends State<EditUserProfileWidget> {
                                   .update(usersUpdateData);
                               Navigator.pop(context);
                             },
-                            text: 'Save Changes',
+                            text: FFLocalizations.of(context).getText(
+                              'zpthgsbh' /* Save Changes */,
+                            ),
                             options: FFButtonOptions(
                               width: 200,
                               height: 50,

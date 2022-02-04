@@ -77,7 +77,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          'Welcome,',
+                          FFLocalizations.of(context).getText(
+                            'zxmaw5d0' /* Welcome, */,
+                          ),
                           style: FlutterFlowTheme.title1,
                         ),
                       ],
@@ -94,7 +96,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Create your account below, or',
+                              FFLocalizations.of(context).getText(
+                                'vthb5wxq' /* Create your account below, or */,
+                              ),
                               style: FlutterFlowTheme.bodyText1,
                             ),
                             FFButtonWidget(
@@ -110,7 +114,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                   ),
                                 );
                               },
-                              text: 'Login',
+                              text: FFLocalizations.of(context).getText(
+                                '93jn7f1m' /* Login */,
+                              ),
                               options: FFButtonOptions(
                                 width: 70,
                                 height: 28,
@@ -139,7 +145,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                       controller: emailController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelText: 'Your email...',
+                        labelText: FFLocalizations.of(context).getText(
+                          'kldz1yiz' /* Your email... */,
+                        ),
                         labelStyle: FlutterFlowTheme.bodyText1,
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -172,7 +180,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                       controller: passwordController,
                       obscureText: !passwordVisibility,
                       decoration: InputDecoration(
-                        labelText: 'Password',
+                        labelText: FFLocalizations.of(context).getText(
+                          'muijba83' /* Password */,
+                        ),
                         labelStyle: FlutterFlowTheme.bodyText1,
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -239,7 +249,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                 (r) => false,
                               );
                             },
-                            text: 'Create Account',
+                            text: FFLocalizations.of(context).getText(
+                              '9b7vmj7a' /* Create Account */,
+                            ),
                             options: FFButtonOptions(
                               width: 170,
                               height: 50,
@@ -274,7 +286,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                           ),
                         );
                       },
-                      text: 'Continue as guest',
+                      text: FFLocalizations.of(context).getText(
+                        '8y2h1zuw' /* Continue as guest */,
+                      ),
                       options: FFButtonOptions(
                         width: 200,
                         height: 40,

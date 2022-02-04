@@ -45,7 +45,9 @@ class _DeleteStoryWidgetState extends State<DeleteStoryWidget> {
                   ),
                 );
               },
-              text: 'Delete Story',
+              text: FFLocalizations.of(context).getText(
+                '1jevukmb' /* Delete Story */,
+              ),
               options: FFButtonOptions(
                 width: double.infinity,
                 height: 60,
@@ -67,7 +69,9 @@ class _DeleteStoryWidgetState extends State<DeleteStoryWidget> {
                 onPressed: () async {
                   Navigator.pop(context);
                 },
-                text: 'Cancel',
+                text: FFLocalizations.of(context).getText(
+                  '2bnw1f6a' /* Cancel */,
+                ),
                 options: FFButtonOptions(
                   width: double.infinity,
                   height: 60,

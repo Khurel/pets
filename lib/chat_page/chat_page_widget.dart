@@ -76,7 +76,9 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
           children: [
             if (!(isGroupChat()) ?? true)
               Text(
-                'Group Chat',
+                FFLocalizations.of(context).getText(
+                  'frsmlihw' /* Group Chat */,
+                ),
                 style: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
                   color: Colors.black,

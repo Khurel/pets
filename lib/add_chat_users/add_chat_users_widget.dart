@@ -62,7 +62,9 @@ class _AddChatUsersWidgetState extends State<AddChatUsersWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Add Friends to chat',
+              FFLocalizations.of(context).getText(
+                '3jaegov4' /* Add Friends to chat */,
+              ),
               style: FlutterFlowTheme.subtitle1.override(
                 fontFamily: 'Lexend Deca',
                 color: Color(0xFF95A1AC),
@@ -71,7 +73,9 @@ class _AddChatUsersWidgetState extends State<AddChatUsersWidget> {
               ),
             ),
             Text(
-              'Select the friends to add to chat.',
+              FFLocalizations.of(context).getText(
+                'gy253yz5' /* Select the friends to add to c... */,
+              ),
               style: FlutterFlowTheme.bodyText2.override(
                 fontFamily: 'Lexend Deca',
                 color: Color(0xFF1A1F24),
@@ -108,7 +112,9 @@ class _AddChatUsersWidgetState extends State<AddChatUsersWidget> {
               controller: textController,
               obscureText: false,
               decoration: InputDecoration(
-                hintText: 'Search for friends...',
+                hintText: FFLocalizations.of(context).getText(
+                  'di8p2cfk' /* Search for friends... */,
+                ),
                 hintStyle: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
                   color: Color(0xFF95A1AC),
@@ -306,7 +312,9 @@ class _AddChatUsersWidgetState extends State<AddChatUsersWidget> {
 
                   setState(() {});
                 },
-                text: 'Invite to Chat',
+                text: FFLocalizations.of(context).getText(
+                  'pscdl7kg' /* Invite to Chat */,
+                ),
                 options: FFButtonOptions(
                   width: 130,
                   height: 40,

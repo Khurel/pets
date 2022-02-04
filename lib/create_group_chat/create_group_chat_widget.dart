@@ -58,7 +58,9 @@ class _CreateGroupChatWidgetState extends State<CreateGroupChatWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Create Group Chat',
+              FFLocalizations.of(context).getText(
+                '2n6pand2' /* Create Group Chat */,
+              ),
               style: FlutterFlowTheme.subtitle1.override(
                 fontFamily: 'Lexend Deca',
                 color: Color(0xFF95A1AC),
@@ -67,7 +69,9 @@ class _CreateGroupChatWidgetState extends State<CreateGroupChatWidget> {
               ),
             ),
             Text(
-              'Select the friends to add to chat.',
+              FFLocalizations.of(context).getText(
+                '72n59taj' /* Select the friends to add to c... */,
+              ),
               style: FlutterFlowTheme.bodyText2.override(
                 fontFamily: 'Lexend Deca',
                 color: Color(0xFF1A1F24),
@@ -104,7 +108,9 @@ class _CreateGroupChatWidgetState extends State<CreateGroupChatWidget> {
               controller: textController,
               obscureText: false,
               decoration: InputDecoration(
-                hintText: 'Search for friends...',
+                hintText: FFLocalizations.of(context).getText(
+                  '4jmpily6' /* Search for friends... */,
+                ),
                 hintStyle: FlutterFlowTheme.bodyText1.override(
                   fontFamily: 'Lexend Deca',
                   color: Color(0xFF95A1AC),
@@ -303,7 +309,9 @@ class _CreateGroupChatWidgetState extends State<CreateGroupChatWidget> {
 
                   setState(() {});
                 },
-                text: 'Create Chat',
+                text: FFLocalizations.of(context).getText(
+                  '084be3fr' /* Create Chat */,
+                ),
                 options: FFButtonOptions(
                   width: 130,
                   height: 40,

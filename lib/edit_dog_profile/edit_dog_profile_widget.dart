@@ -74,7 +74,9 @@ class _EditDogProfileWidgetState extends State<EditDogProfileWidget> {
               },
             ),
             title: Text(
-              'Dog Profile',
+              FFLocalizations.of(context).getText(
+                '2ze2lpkp' /* Dog Profile */,
+              ),
               style: FlutterFlowTheme.title2,
             ),
             actions: [],
@@ -98,7 +100,9 @@ class _EditDogProfileWidgetState extends State<EditDogProfileWidget> {
                           children: [
                             Expanded(
                               child: Text(
-                                'Fill out your dog profiles below! And then get to sharing your pups!',
+                                FFLocalizations.of(context).getText(
+                                  'hqorw79p' /* Fill out your dog profiles bel... */,
+                                ),
                                 style: FlutterFlowTheme.bodyText1,
                               ),
                             ),
@@ -170,7 +174,10 @@ class _EditDogProfileWidgetState extends State<EditDogProfileWidget> {
                                 controller: dogNameController,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Dog Name',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'nfrqg9pm' /* Dog Name */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.subtitle1,
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
@@ -212,7 +219,10 @@ class _EditDogProfileWidgetState extends State<EditDogProfileWidget> {
                                   controller: dogBreedController,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Dog Breed',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      '761si4lm' /* Dog Breed */,
+                                    ),
                                     labelStyle: FlutterFlowTheme.bodyText1,
                                     enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
@@ -255,7 +265,10 @@ class _EditDogProfileWidgetState extends State<EditDogProfileWidget> {
                                   controller: dogAgeController,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Dog Age',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      '3cnqvk21' /* Dog Age */,
+                                    ),
                                     labelStyle: FlutterFlowTheme.bodyText1,
                                     enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
@@ -299,7 +312,9 @@ class _EditDogProfileWidgetState extends State<EditDogProfileWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'Adding multiple pups is coming soon.',
+                                FFLocalizations.of(context).getText(
+                                  'q5o7end9' /* Adding multiple pups is coming... */,
+                                ),
                                 style: FlutterFlowTheme.bodyText2,
                               ),
                             ],
@@ -324,7 +339,9 @@ class _EditDogProfileWidgetState extends State<EditDogProfileWidget> {
                                       .update(dogsUpdateData);
                                   Navigator.pop(context);
                                 },
-                                text: 'Save Changes',
+                                text: FFLocalizations.of(context).getText(
+                                  'p51v2ft9' /* Save Changes */,
+                                ),
                                 options: FFButtonOptions(
                                   width: 200,
                                   height: 50,

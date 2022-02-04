@@ -46,7 +46,9 @@ class _EditSettingsWidgetState extends State<EditSettingsWidget> {
             title: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
               child: Text(
-                'Settings',
+                FFLocalizations.of(context).getText(
+                  '42v0a6nl' /* Settings */,
+                ),
                 style: FlutterFlowTheme.title2,
               ),
             ),
@@ -123,7 +125,9 @@ class _EditSettingsWidgetState extends State<EditSettingsWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(24, 12, 0, 12),
                     child: Text(
-                      'Account Settings',
+                      FFLocalizations.of(context).getText(
+                        'he1jaa26' /* Account Settings */,
+                      ),
                       style: FlutterFlowTheme.bodyText1.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0xFF090F13),
@@ -165,7 +169,9 @@ class _EditSettingsWidgetState extends State<EditSettingsWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                                 child: Text(
-                                  'Edit Profile',
+                                  FFLocalizations.of(context).getText(
+                                    'pwbv4k47' /* Edit Profile */,
+                                  ),
                                   style: FlutterFlowTheme.bodyText1.override(
                                     fontFamily: 'Lexend Deca',
                                     color: Color(0xFF090F13),
@@ -218,7 +224,9 @@ class _EditSettingsWidgetState extends State<EditSettingsWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       24, 0, 0, 0),
                                   child: Text(
-                                    'Change Password',
+                                    FFLocalizations.of(context).getText(
+                                      '1a4w9re7' /* Change Password */,
+                                    ),
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Lexend Deca',
                                       color: Color(0xFF090F13),
@@ -263,7 +271,9 @@ class _EditSettingsWidgetState extends State<EditSettingsWidget> {
                           (r) => false,
                         );
                       },
-                      text: 'Log Out',
+                      text: FFLocalizations.of(context).getText(
+                        'm9o4as4r' /* Log Out */,
+                      ),
                       options: FFButtonOptions(
                         width: 90,
                         height: 40,

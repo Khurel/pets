@@ -371,7 +371,9 @@ class _PostDetailsWidgetState extends State<PostDetailsWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      'Comments',
+                                      FFLocalizations.of(context).getText(
+                                        '4ummd2f1' /* Comments */,
+                                      ),
                                       style:
                                           FlutterFlowTheme.bodyText2.override(
                                         fontFamily: 'Lexend Deca',
@@ -566,7 +568,10 @@ class _PostDetailsWidgetState extends State<PostDetailsWidget> {
                                                                               0),
                                                                       child:
                                                                           Text(
-                                                                        'Posted',
+                                                                        FFLocalizations.of(context)
+                                                                            .getText(
+                                                                          '63rs70ub' /* Posted */,
+                                                                        ),
                                                                         style: FlutterFlowTheme
                                                                             .bodyText1
                                                                             .override(
@@ -649,7 +654,10 @@ class _PostDetailsWidgetState extends State<PostDetailsWidget> {
                                     controller: textController,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      hintText: 'Comment here...',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'j11pbu6o' /* Comment here... */,
+                                      ),
                                       hintStyle: FlutterFlowTheme.bodyText1,
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
@@ -702,7 +710,9 @@ class _PostDetailsWidgetState extends State<PostDetailsWidget> {
                                     await postDetailsUserPostsRecord.reference
                                         .update(userPostsUpdateData);
                                   },
-                                  text: 'Post',
+                                  text: FFLocalizations.of(context).getText(
+                                    'fnac9e6y' /* Post */,
+                                  ),
                                   options: FFButtonOptions(
                                     width: 70,
                                     height: 40,

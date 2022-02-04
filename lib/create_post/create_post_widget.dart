@@ -44,7 +44,9 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
         backgroundColor: FlutterFlowTheme.background,
         automaticallyImplyLeading: false,
         title: Text(
-          'Create Post',
+          FFLocalizations.of(context).getText(
+            'kmmolshr' /* Create Post */,
+          ),
           style: FlutterFlowTheme.title2.override(
             fontFamily: 'Lexend Deca',
             color: Color(0xFF090F13),
@@ -213,7 +215,10 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                                         controller: textController,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          hintText: 'Comment....',
+                                          hintText: FFLocalizations.of(context)
+                                              .getText(
+                                            'fy7d0wfw' /* Comment.... */,
+                                          ),
                                           hintStyle: FlutterFlowTheme.bodyText2
                                               .override(
                                             fontFamily: 'Lexend Deca',
@@ -266,12 +271,17 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       FlutterFlowPlacePicker(
-                        iOSGoogleMapsApiKey: '',
-                        androidGoogleMapsApiKey: '',
-                        webGoogleMapsApiKey: '',
+                        iOSGoogleMapsApiKey:
+                            'AIzaSyB_6op8QzHu4Y7nVtfatNDRBOH_p0Pq1lQ',
+                        androidGoogleMapsApiKey:
+                            'AIzaSyAv3sdHdONeOTZG6H5bUUU3Wpa6JA5SRVU',
+                        webGoogleMapsApiKey:
+                            'AIzaSyAhWjoDU9-od6EbSwVoZnS-Yf-12Q_80DI',
                         onSelect: (place) =>
                             setState(() => placePickerValue = place),
-                        defaultText: 'Location',
+                        defaultText: FFLocalizations.of(context).getText(
+                          'y6omslq4' /* Location */,
+                        ),
                         icon: Icon(
                           Icons.place,
                           color: FlutterFlowTheme.grayIcon,
@@ -331,7 +341,9 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                     ),
                   );
                 },
-                text: 'Create Post',
+                text: FFLocalizations.of(context).getText(
+                  'tbutbtfj' /* Create Post */,
+                ),
                 options: FFButtonOptions(
                   width: 270,
                   height: 50,

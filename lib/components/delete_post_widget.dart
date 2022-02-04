@@ -45,7 +45,9 @@ class _DeletePostWidgetState extends State<DeletePostWidget> {
                   ),
                 );
               },
-              text: 'Delete Post',
+              text: FFLocalizations.of(context).getText(
+                '1gz3v85v' /* Delete Post */,
+              ),
               options: FFButtonOptions(
                 width: double.infinity,
                 height: 60,
@@ -67,7 +69,9 @@ class _DeletePostWidgetState extends State<DeletePostWidget> {
                 onPressed: () async {
                   Navigator.pop(context);
                 },
-                text: 'Cancel',
+                text: FFLocalizations.of(context).getText(
+                  '9u3m5h59' /* Cancel */,
+                ),
                 options: FFButtonOptions(
                   width: double.infinity,
                   height: 60,

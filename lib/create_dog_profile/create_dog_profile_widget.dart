@@ -40,14 +40,18 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
         backgroundColor: FlutterFlowTheme.tertiaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Dog Profile',
+          FFLocalizations.of(context).getText(
+            '46ohl9se' /* Dog Profile */,
+          ),
           style: FlutterFlowTheme.title2,
         ),
         actions: [
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 20, 24, 0),
             child: Text(
-              '1/2',
+              FFLocalizations.of(context).getText(
+                'g0h19ls5' /* 1/2 */,
+              ),
               style: FlutterFlowTheme.bodyText1.override(
                 fontFamily: 'Lexend Deca',
                 color: FlutterFlowTheme.primaryColor,
@@ -76,7 +80,9 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Fill out your dog profiles below! And then get to sharing your pups!',
+                            FFLocalizations.of(context).getText(
+                              '4bazbhq9' /* Fill out your dog profiles bel... */,
+                            ),
                             style: FlutterFlowTheme.bodyText1,
                           ),
                         ),
@@ -153,7 +159,9 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                               controller: dogNameController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Dog Name',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'xf1qry6x' /* Dog Name */,
+                                ),
                                 labelStyle: FlutterFlowTheme.subtitle1,
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
@@ -196,7 +204,9 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                               controller: dogBreedController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Dog Breed',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'ndi4vy8g' /* Dog Breed */,
+                                ),
                                 labelStyle: FlutterFlowTheme.bodyText1,
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
@@ -239,7 +249,9 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                               controller: dogAgeController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Dog Age',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'mpenl057' /* Dog Age */,
+                                ),
                                 labelStyle: FlutterFlowTheme.bodyText1,
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
@@ -284,7 +296,9 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'You can add multiple pups in your profile.',
+                            FFLocalizations.of(context).getText(
+                              'k0s4tzfc' /* You can add multiple pups in y... */,
+                            ),
                             style: FlutterFlowTheme.bodyText2,
                           ),
                         ],
@@ -307,7 +321,9 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                                 (r) => false,
                               );
                             },
-                            text: 'Skip',
+                            text: FFLocalizations.of(context).getText(
+                              'idc1v21b' /* Skip */,
+                            ),
                             options: FFButtonOptions(
                               width: 100,
                               height: 50,
@@ -348,7 +364,9 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                                 (r) => false,
                               );
                             },
-                            text: 'Save & Continue',
+                            text: FFLocalizations.of(context).getText(
+                              '6zwl0i8j' /* Save & Continue */,
+                            ),
                             options: FFButtonOptions(
                               width: 180,
                               height: 50,

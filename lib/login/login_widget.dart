@@ -78,7 +78,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          'Welcome Back,',
+                          FFLocalizations.of(context).getText(
+                            'ao113yup' /* Welcome Back, */,
+                          ),
                           style: FlutterFlowTheme.title1,
                         ),
                       ],
@@ -95,7 +97,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Access your account below or',
+                              FFLocalizations.of(context).getText(
+                                'sdffg2nt' /* Access your account below or */,
+                              ),
                               style: FlutterFlowTheme.bodyText1,
                             ),
                             FFButtonWidget(
@@ -111,7 +115,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   ),
                                 );
                               },
-                              text: 'Create Account',
+                              text: FFLocalizations.of(context).getText(
+                                'h828dp9i' /* Create Account */,
+                              ),
                               options: FFButtonOptions(
                                 width: 125,
                                 height: 28,
@@ -140,7 +146,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       controller: emailController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelText: 'Your email...',
+                        labelText: FFLocalizations.of(context).getText(
+                          '21bkf52g' /* Your email... */,
+                        ),
                         labelStyle: FlutterFlowTheme.bodyText1,
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -173,7 +181,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       controller: passwordController,
                       obscureText: !passwordVisibility,
                       decoration: InputDecoration(
-                        labelText: 'Password',
+                        labelText: FFLocalizations.of(context).getText(
+                          'fisg94jf' /* Password */,
+                        ),
                         labelStyle: FlutterFlowTheme.bodyText1,
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -229,7 +239,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 ),
                               );
                             },
-                            text: 'Forgot Password?',
+                            text: FFLocalizations.of(context).getText(
+                              '5s4wcxhb' /* Forgot Password? */,
+                            ),
                             options: FFButtonOptions(
                               width: 170,
                               height: 50,
@@ -270,7 +282,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 (r) => false,
                               );
                             },
-                            text: 'Login',
+                            text: FFLocalizations.of(context).getText(
+                              'pwt4s8ja' /* Login */,
+                            ),
                             options: FFButtonOptions(
                               width: 130,
                               height: 50,
@@ -308,7 +322,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                           (r) => false,
                         );
                       },
-                      text: 'Continue as guest',
+                      text: FFLocalizations.of(context).getText(
+                        'lmlmdk16' /* Continue as guest */,
+                      ),
                       options: FFButtonOptions(
                         width: 200,
                         height: 40,

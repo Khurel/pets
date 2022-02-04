@@ -76,7 +76,9 @@ class _CommentsWidgetState extends State<CommentsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Comments',
+                              FFLocalizations.of(context).getText(
+                                'syu33tfz' /* Comments */,
+                              ),
                               style: FlutterFlowTheme.title3,
                             ),
                           ],
@@ -219,7 +221,11 @@ class _CommentsWidgetState extends State<CommentsWidget> {
                                                                         4,
                                                                         0),
                                                             child: Text(
-                                                              'Posted',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'cb431kck' /* Posted */,
+                                                              ),
                                                               style:
                                                                   FlutterFlowTheme
                                                                       .bodyText1
@@ -291,7 +297,9 @@ class _CommentsWidgetState extends State<CommentsWidget> {
                             controller: textController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              hintText: 'Comment here...',
+                              hintText: FFLocalizations.of(context).getText(
+                                'nffccvqo' /* Comment here... */,
+                              ),
                               hintStyle: FlutterFlowTheme.bodyText1,
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
@@ -343,7 +351,9 @@ class _CommentsWidgetState extends State<CommentsWidget> {
                             await columnUserStoriesRecord.reference
                                 .update(userStoriesUpdateData);
                           },
-                          text: 'Post',
+                          text: FFLocalizations.of(context).getText(
+                            '0vdocnid' /* Post */,
+                          ),
                           options: FFButtonOptions(
                             width: 70,
                             height: 40,

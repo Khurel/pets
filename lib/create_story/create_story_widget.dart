@@ -185,7 +185,10 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                                     controller: storyDescriptionController,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      hintText: 'Comment....',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        '46xi0sru' /* Comment.... */,
+                                      ),
                                       hintStyle:
                                           FlutterFlowTheme.bodyText2.override(
                                         fontFamily: 'Lexend Deca',
@@ -294,7 +297,9 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                                 size: 32,
                               ),
                               Text(
-                                'Photo',
+                                FFLocalizations.of(context).getText(
+                                  '8etj84p3' /* Photo */,
+                                ),
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Lexend Deca',
@@ -363,7 +368,9 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                                 size: 32,
                               ),
                               Text(
-                                'Video',
+                                FFLocalizations.of(context).getText(
+                                  '824xkdm9' /* Video */,
+                                ),
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.bodyText1.override(
                                   fontFamily: 'Lexend Deca',
@@ -398,7 +405,9 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                           ),
                         );
                       },
-                      text: 'Create Story',
+                      text: FFLocalizations.of(context).getText(
+                        'g5reqepq' /* Create Story */,
+                      ),
                       options: FFButtonOptions(
                         width: 140,
                         height: 50,

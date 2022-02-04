@@ -194,7 +194,9 @@ class _ViewProfilePageOtherWidgetState
                                       ),
                                     );
                                   },
-                                  text: 'Message',
+                                  text: FFLocalizations.of(context).getText(
+                                    'y1naplz7' /* Message */,
+                                  ),
                                   options: FFButtonOptions(
                                     width: 270,
                                     height: 40,
@@ -235,10 +237,14 @@ class _ViewProfilePageOtherWidgetState
                           indicatorWeight: 2,
                           tabs: [
                             Tab(
-                              text: 'Dog Profiles',
+                              text: FFLocalizations.of(context).getText(
+                                'f2kb16o4' /* Dog Profiles */,
+                              ),
                             ),
                             Tab(
-                              text: 'Posts',
+                              text: FFLocalizations.of(context).getText(
+                                '3r3wv83v' /* Posts */,
+                              ),
                             ),
                           ],
                         ),

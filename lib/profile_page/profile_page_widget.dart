@@ -177,7 +177,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             ),
                           );
                         },
-                        text: 'Add a Dog',
+                        text: FFLocalizations.of(context).getText(
+                          'luouqocf' /* Add a Dog */,
+                        ),
                         options: FFButtonOptions(
                           width: 130,
                           height: 40,
@@ -206,7 +208,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             ),
                           );
                         },
-                        text: 'Settings',
+                        text: FFLocalizations.of(context).getText(
+                          'zq5ir1a7' /* Settings */,
+                        ),
                         options: FFButtonOptions(
                           width: 130,
                           height: 40,
@@ -239,10 +243,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           indicatorWeight: 2,
                           tabs: [
                             Tab(
-                              text: 'Dog Profiles',
+                              text: FFLocalizations.of(context).getText(
+                                'z6vopslv' /* Dog Profiles */,
+                              ),
                             ),
                             Tab(
-                              text: 'Posts',
+                              text: FFLocalizations.of(context).getText(
+                                'hyjac4zs' /* Posts */,
+                              ),
                             ),
                           ],
                         ),

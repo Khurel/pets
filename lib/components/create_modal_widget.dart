@@ -65,7 +65,9 @@ class _CreateModalWidgetState extends State<CreateModalWidget> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                             child: Text(
-                              'Create Story',
+                              FFLocalizations.of(context).getText(
+                                'gxi2ng34' /* Create Story */,
+                              ),
                               style: FlutterFlowTheme.title3.override(
                                 fontFamily: 'Lexend Deca',
                                 color: FlutterFlowTheme.tertiaryColor,
@@ -76,7 +78,9 @@ class _CreateModalWidgetState extends State<CreateModalWidget> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                             child: Text(
-                              'Share a video of your pup.',
+                              FFLocalizations.of(context).getText(
+                                'zfce1io5' /* Share a video of your pup. */,
+                              ),
                               style: FlutterFlowTheme.bodyText1,
                             ),
                           ),
@@ -121,7 +125,9 @@ class _CreateModalWidgetState extends State<CreateModalWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                               child: Text(
-                                'Create Post',
+                                FFLocalizations.of(context).getText(
+                                  '26l31upz' /* Create Post */,
+                                ),
                                 style: FlutterFlowTheme.title3.override(
                                   fontFamily: 'Lexend Deca',
                                   color: FlutterFlowTheme.tertiaryColor,
@@ -133,7 +139,9 @@ class _CreateModalWidgetState extends State<CreateModalWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                                 child: Text(
-                                  'Share a photo that will appear in the timeline.',
+                                  FFLocalizations.of(context).getText(
+                                    'l7dgfxxk' /* Share a photo that will appear... */,
+                                  ),
                                   style: FlutterFlowTheme.bodyText1,
                                 ),
                               ),
@@ -185,7 +193,9 @@ class _CreateModalWidgetState extends State<CreateModalWidget> {
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                           child: Text(
-                            'Create Post',
+                            FFLocalizations.of(context).getText(
+                              '48nktk87' /* Create Post */,
+                            ),
                             style: FlutterFlowTheme.title3.override(
                               fontFamily: 'Lexend Deca',
                               color: FlutterFlowTheme.tertiaryColor,
@@ -195,7 +205,9 @@ class _CreateModalWidgetState extends State<CreateModalWidget> {
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                           child: Text(
-                            'Share photos on your timeline.',
+                            FFLocalizations.of(context).getText(
+                              'dsfd50u8' /* Share photos on your timeline. */,
+                            ),
                             style: FlutterFlowTheme.bodyText1,
                           ),
                         ),

@@ -41,7 +41,9 @@ class _CreateDogProfileNewWidgetState extends State<CreateDogProfileNewWidget> {
         backgroundColor: FlutterFlowTheme.tertiaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Create Dog Profile',
+          FFLocalizations.of(context).getText(
+            'c8pxs061' /* Create Dog Profile */,
+          ),
           style: FlutterFlowTheme.title2,
         ),
         actions: [
@@ -79,7 +81,9 @@ class _CreateDogProfileNewWidgetState extends State<CreateDogProfileNewWidget> {
                     children: [
                       Expanded(
                         child: Text(
-                          'Fill out your dog profiles below! And then get to sharing your pups!',
+                          FFLocalizations.of(context).getText(
+                            'okd4psxo' /* Fill out your dog profiles bel... */,
+                          ),
                           style: FlutterFlowTheme.bodyText1,
                         ),
                       ),
@@ -155,7 +159,9 @@ class _CreateDogProfileNewWidgetState extends State<CreateDogProfileNewWidget> {
                             controller: dogNameController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Dog Name',
+                              labelText: FFLocalizations.of(context).getText(
+                                '2lwfp0wp' /* Dog Name */,
+                              ),
                               labelStyle: FlutterFlowTheme.subtitle1,
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
@@ -197,7 +203,9 @@ class _CreateDogProfileNewWidgetState extends State<CreateDogProfileNewWidget> {
                             controller: dogBreedController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Dog Breed',
+                              labelText: FFLocalizations.of(context).getText(
+                                'p0zephqw' /* Dog Breed */,
+                              ),
                               labelStyle: FlutterFlowTheme.bodyText1,
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
@@ -239,7 +247,9 @@ class _CreateDogProfileNewWidgetState extends State<CreateDogProfileNewWidget> {
                             controller: dogAgeController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Dog Age',
+                              labelText: FFLocalizations.of(context).getText(
+                                'agnk9g2u' /* Dog Age */,
+                              ),
                               labelStyle: FlutterFlowTheme.bodyText1,
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
@@ -291,7 +301,9 @@ class _CreateDogProfileNewWidgetState extends State<CreateDogProfileNewWidget> {
                         await DogsRecord.collection.doc().set(dogsCreateData);
                         Navigator.pop(context);
                       },
-                      text: 'Add Pup',
+                      text: FFLocalizations.of(context).getText(
+                        'w43rjhbd' /* Add Pup */,
+                      ),
                       options: FFButtonOptions(
                         width: 180,
                         height: 50,

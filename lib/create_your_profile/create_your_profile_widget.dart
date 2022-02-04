@@ -29,7 +29,10 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
   void initState() {
     super.initState();
     bioController = TextEditingController();
-    userNameController = TextEditingController(text: '@');
+    userNameController = TextEditingController(
+        text: FFLocalizations.of(context).getText(
+      '0a0jyv3p' /* @ */,
+    ));
     yourNameController = TextEditingController();
   }
 
@@ -41,14 +44,18 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
         backgroundColor: FlutterFlowTheme.tertiaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Your Profile',
+          FFLocalizations.of(context).getText(
+            'z6kxye9y' /* Your Profile */,
+          ),
           style: FlutterFlowTheme.title2,
         ),
         actions: [
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 20, 24, 0),
             child: Text(
-              '2/2',
+              FFLocalizations.of(context).getText(
+                'o1k0572t' /* 2/2 */,
+              ),
               style: FlutterFlowTheme.bodyText1.override(
                 fontFamily: 'Lexend Deca',
                 color: FlutterFlowTheme.primaryColor,
@@ -77,7 +84,9 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Fill out your profile now in order to complete setup of your profile.',
+                            FFLocalizations.of(context).getText(
+                              'bo2s6w4e' /* Fill out your profile now in o... */,
+                            ),
                             style: FlutterFlowTheme.bodyText1,
                           ),
                         ),
@@ -159,7 +168,9 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
                             controller: yourNameController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Your Name',
+                              labelText: FFLocalizations.of(context).getText(
+                                '8onjgi89' /* Your Name */,
+                              ),
                               labelStyle: FlutterFlowTheme.subtitle1,
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
@@ -201,7 +212,9 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
                               controller: userNameController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'UserName',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'boi1hj2t' /* UserName */,
+                                ),
                                 labelStyle: FlutterFlowTheme.bodyText1,
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
@@ -245,7 +258,9 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelStyle: FlutterFlowTheme.bodyText1,
-                                hintText: 'Your Bio',
+                                hintText: FFLocalizations.of(context).getText(
+                                  'gazbueas' /* Your Bio */,
+                                ),
                                 hintStyle: FlutterFlowTheme.bodyText1,
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
@@ -307,7 +322,9 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
                             (r) => false,
                           );
                         },
-                        text: 'Complete Setup',
+                        text: FFLocalizations.of(context).getText(
+                          'f67fj0mr' /* Complete Setup */,
+                        ),
                         options: FFButtonOptions(
                           width: 230,
                           height: 50,
