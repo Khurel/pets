@@ -53,146 +53,176 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.black,
-            size: 24,
-          ),
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-        ),
-        title: Stack(
-          children: [
-            if (!(isGroupChat()) ?? true)
-              Text(
-                FFLocalizations.of(context).getText(
-                  'frsmlihw' /* Group Chat */,
-                ),
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            if (!(isGroupChat()) ?? true)
-              Text(
-                widget.chatUser.displayName,
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Lexend Deca',
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-          ],
-        ),
-        actions: [
-          Visibility(
-            visible: isGroupChat() ?? true,
-            child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
-              child: InkWell(
-                onTap: () async {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AddChatUsersWidget(
-                        chat: _chatInfo.chatRecord,
-                      ),
-                    ),
-                  );
-                },
-                child: Icon(
-                  Icons.person_add,
-                  color: Colors.black,
-                  size: 24,
-                ),
+    return StreamBuilder<List<ChatMessagesRecord>>(
+      stream: queryChatMessagesRecord(
+        queryBuilder: (chatMessagesRecord) => chatMessagesRecord.where('user',
+            isEqualTo: widget.chatUser.reference),
+        singleRecord: true,
+      ),
+      builder: (context, snapshot) {
+        // Customize what your widget looks like when it's loading.
+        if (!snapshot.hasData) {
+          return Center(
+            child: SizedBox(
+              width: 50,
+              height: 50,
+              child: CircularProgressIndicator(
+                color: FlutterFlowTheme.primaryColor,
               ),
             ),
-          ),
-        ],
-        centerTitle: false,
-        elevation: 2,
-      ),
-      body: SafeArea(
-        child: StreamBuilder<FFChatInfo>(
-          stream: FFChatManager.instance.getChatInfo(
-            otherUserRecord: widget.chatUser,
-            chatReference: widget.chatRef,
-          ),
-          builder: (context, snapshot) => snapshot.hasData
-              ? FFChatPage(
-                  chatInfo: snapshot.data,
-                  allowImages: true,
-                  backgroundColor: Color(0xFFF2F4F8),
-                  timeDisplaySetting: TimeDisplaySetting.visibleOnTap,
-                  currentUserBoxDecoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.transparent,
+          );
+        }
+        List<ChatMessagesRecord> chatPageChatMessagesRecordList = snapshot.data;
+        // Return an empty Container when the document does not exist.
+        if (snapshot.data.isEmpty) {
+          return Container();
+        }
+        final chatPageChatMessagesRecord =
+            chatPageChatMessagesRecordList.isNotEmpty
+                ? chatPageChatMessagesRecordList.first
+                : null;
+        return Scaffold(
+          key: scaffoldKey,
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            automaticallyImplyLeading: false,
+            leading: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30,
+              borderWidth: 1,
+              buttonSize: 60,
+              icon: Icon(
+                Icons.arrow_back_rounded,
+                color: Colors.black,
+                size: 24,
+              ),
+              onPressed: () async {
+                Navigator.pop(context);
+              },
+            ),
+            title: Stack(
+              children: [
+                if (!(isGroupChat()) ?? true)
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      'frsmlihw' /* Group Chat */,
                     ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  otherUsersBoxDecoration: BoxDecoration(
-                    color: Color(0xFF4B39EF),
-                    border: Border.all(
-                      color: Colors.transparent,
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
-                    borderRadius: BorderRadius.circular(15),
                   ),
-                  currentUserTextStyle: GoogleFonts.getFont(
-                    'DM Sans',
-                    color: Color(0xFF1E2429),
-                    fontWeight: FontWeight.w500,
-                    fontSize: 14,
-                    fontStyle: FontStyle.normal,
+                if (!(isGroupChat()) ?? true)
+                  Text(
+                    _chatInfo.otherUsersList.length.toString(),
+                    style: FlutterFlowTheme.bodyText1.override(
+                      fontFamily: 'Lexend Deca',
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  otherUsersTextStyle: GoogleFonts.getFont(
-                    'DM Sans',
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 14,
-                  ),
-                  inputHintTextStyle: GoogleFonts.getFont(
-                    'DM Sans',
-                    color: Color(0xFF95A1AC),
-                    fontWeight: FontWeight.normal,
-                    fontSize: 14,
-                  ),
-                  inputTextStyle: GoogleFonts.getFont(
-                    'DM Sans',
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 14,
-                  ),
-                  emptyChatWidget: Image.asset(
-                    'assets/images/messagesEmpty@2x.png',
-                    width: MediaQuery.of(context).size.width * 0.76,
-                  ),
-                )
-              : const Center(
-                  child: SizedBox(
-                    width: 50,
-                    height: 50,
-                    child: CircularProgressIndicator(
-                      color: FlutterFlowTheme.primaryColor,
+              ],
+            ),
+            actions: [
+              Visibility(
+                visible: isGroupChat() ?? true,
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                  child: InkWell(
+                    onTap: () async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AddChatUsersWidget(
+                            chat: _chatInfo.chatRecord,
+                          ),
+                        ),
+                      );
+                    },
+                    child: Icon(
+                      Icons.person_add,
+                      color: Colors.black,
+                      size: 24,
                     ),
                   ),
                 ),
-        ),
-      ),
+              ),
+            ],
+            centerTitle: false,
+            elevation: 2,
+          ),
+          body: SafeArea(
+            child: StreamBuilder<FFChatInfo>(
+              stream: FFChatManager.instance.getChatInfo(
+                otherUserRecord: widget.chatUser,
+                chatReference: widget.chatRef,
+              ),
+              builder: (context, snapshot) => snapshot.hasData
+                  ? FFChatPage(
+                      chatInfo: snapshot.data,
+                      allowImages: true,
+                      backgroundColor: Color(0xFFF2F4F8),
+                      timeDisplaySetting: TimeDisplaySetting.visibleOnTap,
+                      currentUserBoxDecoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.transparent,
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      otherUsersBoxDecoration: BoxDecoration(
+                        color: Color(0xFF4B39EF),
+                        border: Border.all(
+                          color: Colors.transparent,
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      currentUserTextStyle: GoogleFonts.getFont(
+                        'DM Sans',
+                        color: Color(0xFF1E2429),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                        fontStyle: FontStyle.normal,
+                      ),
+                      otherUsersTextStyle: GoogleFonts.getFont(
+                        'DM Sans',
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                      ),
+                      inputHintTextStyle: GoogleFonts.getFont(
+                        'DM Sans',
+                        color: Color(0xFF95A1AC),
+                        fontWeight: FontWeight.normal,
+                        fontSize: 14,
+                      ),
+                      inputTextStyle: GoogleFonts.getFont(
+                        'DM Sans',
+                        color: Colors.black,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 14,
+                      ),
+                      emptyChatWidget: Image.asset(
+                        'assets/images/messagesEmpty@2x.png',
+                        width: MediaQuery.of(context).size.width * 0.76,
+                      ),
+                    )
+                  : const Center(
+                      child: SizedBox(
+                        width: 50,
+                        height: 50,
+                        child: CircularProgressIndicator(
+                          color: FlutterFlowTheme.primaryColor,
+                        ),
+                      ),
+                    ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

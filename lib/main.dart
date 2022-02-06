@@ -68,8 +68,8 @@ class _MyAppState extends State<MyApp> {
       ],
       locale: _locale,
       supportedLocales: const [
-        Locale('ja', ''),
         Locale('en', ''),
+        Locale('ja', ''),
       ],
       theme: ThemeData(primarySwatch: Colors.blue),
       home: initialUser == null || displaySplashImage

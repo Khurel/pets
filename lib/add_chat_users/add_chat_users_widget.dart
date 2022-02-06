@@ -159,6 +159,8 @@ class _AddChatUsersWidgetState extends State<AddChatUsersWidget> {
           Expanded(
             child: StreamBuilder<List<UsersRecord>>(
               stream: queryUsersRecord(
+                queryBuilder: (usersRecord) =>
+                    usersRecord.orderBy('display_name'),
                 limit: 50,
               ),
               builder: (context, snapshot) {

@@ -9,7 +9,7 @@ class FFLocalizations {
   static FFLocalizations of(BuildContext context) =>
       Localizations.of<FFLocalizations>(context, FFLocalizations);
 
-  static List<String> languages() => ['ja', 'en'];
+  static List<String> languages() => ['en', 'ja'];
 
   String get languageCode => locale.languageCode;
   int get languageIndex => languages().contains(languageCode)
@@ -20,10 +20,10 @@ class FFLocalizations {
       (kTranslationsMap[key] ?? {})[locale.languageCode] ?? '';
 
   String getVariableText({
-    String ja = '',
     String en = '',
+    String ja = '',
   }) =>
-      [ja, en][languageIndex] ?? '';
+      [en, ja][languageIndex] ?? '';
 }
 
 class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
@@ -45,630 +45,632 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // login
   {
     'ao113yup': {
-      'ja': 'Welcome Back,',
-      'en': '',
+      'en': 'Welcome Back,',
+      'ja': 'お帰りなさい、',
     },
     'sdffg2nt': {
-      'ja': 'Access your account below or',
-      'en': '',
+      'en': 'Access your account below or',
+      'ja': '以下のアカウントにアクセスするか、',
     },
     'h828dp9i': {
-      'ja': 'Create Account',
-      'en': '',
+      'en': 'Create Account',
+      'ja': 'アカウントを作成する',
     },
     '21bkf52g': {
-      'ja': 'Your email...',
-      'en': '',
+      'en': 'Your email...',
+      'ja': 'あなたのメール...',
     },
     'fisg94jf': {
-      'ja': 'Password',
-      'en': '',
+      'en': 'Password',
+      'ja': 'パスワード',
     },
     '5s4wcxhb': {
-      'ja': 'Forgot Password?',
-      'en': '',
+      'en': 'Forgot Password?',
+      'ja': 'パスワードをお忘れですか？',
     },
     'pwt4s8ja': {
-      'ja': 'Login',
-      'en': '',
+      'en': 'Login',
+      'ja': 'ログイン',
     },
     'lmlmdk16': {
-      'ja': 'Continue as guest',
-      'en': '',
+      'en': 'Continue as guest',
+      'ja': 'ゲストとして続行',
     },
   },
   // createAccount
   {
     'zxmaw5d0': {
-      'ja': 'Welcome,',
-      'en': '',
+      'en': 'Welcome,',
+      'ja': 'いらっしゃいませ、',
     },
     'vthb5wxq': {
-      'ja': 'Create your account below, or',
-      'en': '',
+      'en': 'Create your account below, or',
+      'ja': '以下でアカウントを作成するか、',
     },
     '93jn7f1m': {
-      'ja': 'Login',
-      'en': '',
+      'en': 'Login',
+      'ja': 'ログイン',
     },
     'kldz1yiz': {
-      'ja': 'Your email...',
-      'en': '',
+      'en': 'Your email...',
+      'ja': 'あなたのメール...',
     },
     'muijba83': {
-      'ja': 'Password',
-      'en': '',
+      'en': 'Password',
+      'ja': 'パスワード',
     },
     '9b7vmj7a': {
-      'ja': 'Create Account',
-      'en': '',
+      'en': 'Create Account',
+      'ja': 'アカウントを作成する',
     },
     '8y2h1zuw': {
-      'ja': 'Continue as guest',
-      'en': '',
+      'en': 'Continue as guest',
+      'ja': 'ゲストとして続行',
     },
   },
   // createDogProfile
   {
     '46ohl9se': {
-      'ja': 'Dog Profile',
-      'en': '',
+      'en': 'Dog Profile',
+      'ja': '犬のプロフィール',
     },
     'g0h19ls5': {
+      'en': '1/2',
       'ja': '1/2',
-      'en': '',
     },
     '4bazbhq9': {
-      'ja':
+      'en':
           'Fill out your dog profiles below! And then get to sharing your pups!',
-      'en': '',
+      'ja': '以下にあなたの犬のプロフィールを記入してください！そして、あなたの子犬を共有するようになります！',
     },
     'xf1qry6x': {
-      'ja': 'Dog Name',
-      'en': '',
+      'en': 'Dog Name',
+      'ja': '犬の名前',
     },
     'ndi4vy8g': {
-      'ja': 'Dog Breed',
-      'en': '',
+      'en': 'Dog Breed',
+      'ja': '犬種',
     },
     'mpenl057': {
-      'ja': 'Dog Age',
-      'en': '',
+      'en': 'Dog Age',
+      'ja': '犬の年齢',
     },
     'k0s4tzfc': {
-      'ja': 'You can add multiple pups in your profile.',
-      'en': '',
+      'en': 'You can add multiple pups in your profile.',
+      'ja': 'プロファイルに複数の子犬を追加できます。',
     },
     'idc1v21b': {
-      'ja': 'Skip',
-      'en': '',
+      'en': 'Skip',
+      'ja': 'スキップ',
     },
     '6zwl0i8j': {
-      'ja': 'Save & Continue',
-      'en': '',
+      'en': 'Save & Continue',
+      'ja': '保存して続行',
     },
   },
   // createYourProfile
   {
     'z6kxye9y': {
-      'ja': 'Your Profile',
-      'en': '',
+      'en': 'Your Profile',
+      'ja': 'あなたのプロフィール',
     },
     'o1k0572t': {
+      'en': '2/2',
       'ja': '2/2',
-      'en': '',
     },
     'bo2s6w4e': {
-      'ja':
+      'en':
           'Fill out your profile now in order to complete setup of your profile.',
-      'en': '',
+      'ja': 'プロファイルのセットアップを完了するために、今すぐプロファイルに記入してください。',
     },
     '8onjgi89': {
-      'ja': 'Your Name',
-      'en': '',
+      'en': 'Your Name',
+      'ja': 'あなたの名前',
     },
     'boi1hj2t': {
+      'en': 'UserName',
       'ja': 'UserName',
-      'en': '',
     },
     '0a0jyv3p': {
+      'en': '@',
       'ja': '@',
-      'en': '',
     },
     'gazbueas': {
-      'ja': 'Your Bio',
-      'en': '',
+      'en': 'Your Bio',
+      'ja': 'あなたの略歴',
     },
     'f67fj0mr': {
-      'ja': 'Complete Setup',
-      'en': '',
+      'en': 'Complete Setup',
+      'ja': '完全なセットアップ',
     },
   },
   // forgotPassword
   {
     '6idgdbw2': {
-      'ja': 'Forgot Password',
-      'en': '',
+      'en': 'Forgot Password',
+      'ja': 'パスワードをお忘れですか',
     },
     'ym1yml4e': {
-      'ja': 'Enter your email',
-      'en': '',
+      'en': 'Enter your email',
+      'ja': 'メールアドレスを入力',
     },
     'p2vqp9kp': {
-      'ja':
+      'en':
           'We will send you an email with a link to reset your password, please enter the email associated with your account above.',
-      'en': '',
+      'ja':
+          'パスワードをリセットするためのリンクが記載されたメールをお送りします。上記のアカウントに関連付けられているメールアドレスを入力してください。',
     },
     'ghk2g2js': {
-      'ja': 'Send Reset Link',
-      'en': '',
+      'en': 'Send Reset Link',
+      'ja': 'リセットリンクを送信',
     },
   },
   // homePage
   {
     'kfmt24o9': {
+      'en': '@username',
       'ja': '@username',
-      'en': '',
     },
     's0tod2zy': {
+      'en': '2,493',
       'ja': '2,493',
-      'en': '',
     },
     'ookq0vic': {
+      'en': '4',
       'ja': '4',
-      'en': '',
     },
     '9qw52ad8': {
-      'ja':
+      'en':
           'I\'m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.⁣ ',
-      'en': '',
+      'ja': 'ファンのためだけにInstagramをすばやく再設計して戻ってきました。丸みを帯びた角とかわいいアイコン、他に何が必要か、ハハ。⁣',
     },
   },
   // profilePage
   {
     'luouqocf': {
-      'ja': 'Add a Dog',
-      'en': '',
+      'en': 'Add a Dog',
+      'ja': '犬を追加する',
     },
     'zq5ir1a7': {
-      'ja': 'Settings',
-      'en': '',
+      'en': 'Settings',
+      'ja': '設定',
     },
     'z6vopslv': {
-      'ja': 'Dog Profiles',
-      'en': '',
+      'en': 'Dog Profiles',
+      'ja': '犬のプロフィール',
     },
     'hyjac4zs': {
-      'ja': 'Posts',
-      'en': '',
+      'en': 'Posts',
+      'ja': '投稿',
     },
     '1fgmtccg': {
+      'en': '@username',
       'ja': '@username',
-      'en': '',
     },
     'pnki0vvl': {
+      'en': '2,493',
       'ja': '2,493',
-      'en': '',
     },
     'rff6ct1e': {
+      'en': '4',
       'ja': '4',
-      'en': '',
     },
     'eui7uz93': {
-      'ja':
+      'en':
           'I\'m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.⁣ ',
-      'en': '',
+      'ja': 'ファンのためだけにInstagramをすばやく再設計して戻ってきました。丸みを帯びた角とかわいいアイコン、他に何が必要か、ハハ。⁣',
     },
   },
   // createPost
   {
     'kmmolshr': {
-      'ja': 'Create Post',
-      'en': '',
+      'en': 'Create Post',
+      'ja': '投稿を作成',
     },
     'fy7d0wfw': {
-      'ja': 'Comment....',
-      'en': '',
+      'en': 'Comment....',
+      'ja': 'コメント....',
     },
     'y6omslq4': {
-      'ja': 'Location',
-      'en': '',
+      'en': 'Location',
+      'ja': '位置',
     },
     'tbutbtfj': {
-      'ja': 'Create Post',
-      'en': '',
+      'en': 'Create Post',
+      'ja': '投稿を作成',
     },
   },
   // createStory
   {
     '46xi0sru': {
-      'ja': 'Comment....',
-      'en': '',
+      'en': 'Comment....',
+      'ja': 'コメント....',
     },
     '8etj84p3': {
-      'ja': 'Photo',
-      'en': '',
+      'en': 'Photo',
+      'ja': '写真',
     },
     '824xkdm9': {
-      'ja': 'Video',
-      'en': '',
+      'en': 'Video',
+      'ja': 'ビデオ',
     },
     'g5reqepq': {
-      'ja': 'Create Story',
-      'en': '',
+      'en': 'Create Story',
+      'ja': 'ストーリーを作成する',
     },
   },
   // postDetails
   {
     '4ummd2f1': {
-      'ja': 'Comments',
-      'en': '',
+      'en': 'Comments',
+      'ja': 'コメントコメント',
     },
     '63rs70ub': {
-      'ja': 'Posted',
-      'en': '',
+      'en': 'Posted',
+      'ja': '投稿',
     },
     'j11pbu6o': {
-      'ja': 'Comment here...',
-      'en': '',
+      'en': 'Comment here...',
+      'ja': 'ここにコメント...',
     },
     'fnac9e6y': {
-      'ja': 'Post',
-      'en': '',
+      'en': 'Post',
+      'ja': '役職',
     },
   },
   // editSettings
   {
     'he1jaa26': {
-      'ja': 'Account Settings',
-      'en': '',
+      'en': 'Account Settings',
+      'ja': 'アカウント設定',
     },
     'pwbv4k47': {
-      'ja': 'Edit Profile',
-      'en': '',
+      'en': 'Edit Profile',
+      'ja': 'プロファイル編集',
     },
     '1a4w9re7': {
-      'ja': 'Change Password',
-      'en': '',
+      'en': 'Change Password',
+      'ja': 'パスワードを変更する',
     },
     'm9o4as4r': {
-      'ja': 'Log Out',
-      'en': '',
+      'en': 'Log Out',
+      'ja': 'ログアウト',
     },
     '42v0a6nl': {
-      'ja': 'Settings',
-      'en': '',
+      'en': 'Settings',
+      'ja': '設定',
     },
   },
   // editUserProfile
   {
     'lfw6npot': {
-      'ja': 'Your Profile',
-      'en': '',
+      'en': 'Your Profile',
+      'ja': 'あなたのプロフィール',
     },
     'qjrq67b4': {
-      'ja':
+      'en':
           'Fill out your profile now in order to complete setup of your profile.',
-      'en': '',
+      'ja': 'プロファイルのセットアップを完了するために、今すぐプロファイルに記入してください。',
     },
     'xkxomt4e': {
-      'ja': 'Your Name',
-      'en': '',
+      'en': 'Your Name',
+      'ja': 'あなたの名前',
     },
     'act7cuqz': {
+      'en': 'UserName',
       'ja': 'UserName',
-      'en': '',
     },
     '0mv7ilkd': {
-      'ja': 'Your Bio',
-      'en': '',
+      'en': 'Your Bio',
+      'ja': 'あなたの略歴',
     },
     'zpthgsbh': {
-      'ja': 'Save Changes',
-      'en': '',
+      'en': 'Save Changes',
+      'ja': '変更内容を保存',
     },
   },
   // editDogProfile
   {
     '2ze2lpkp': {
-      'ja': 'Dog Profile',
-      'en': '',
+      'en': 'Dog Profile',
+      'ja': '犬のプロフィール',
     },
     'hqorw79p': {
-      'ja':
+      'en':
           'Fill out your dog profiles below! And then get to sharing your pups!',
-      'en': '',
+      'ja': '以下にあなたの犬のプロフィールを記入してください！そして、あなたの子犬を共有するようになります！',
     },
     'nfrqg9pm': {
-      'ja': 'Dog Name',
-      'en': '',
+      'en': 'Dog Name',
+      'ja': '犬の名前',
     },
     '761si4lm': {
-      'ja': 'Dog Breed',
-      'en': '',
+      'en': 'Dog Breed',
+      'ja': '犬種',
     },
     '3cnqvk21': {
-      'ja': 'Dog Age',
-      'en': '',
+      'en': 'Dog Age',
+      'ja': '犬の年齢',
     },
     'q5o7end9': {
-      'ja': 'Adding multiple pups is coming soon.',
-      'en': '',
+      'en': 'Adding multiple pups is coming soon.',
+      'ja': '複数の子犬を追加することはすぐに来ています。',
     },
     'p51v2ft9': {
-      'ja': 'Save Changes',
-      'en': '',
+      'en': 'Save Changes',
+      'ja': '変更内容を保存',
     },
   },
   // changePassword
   {
     'gzezrooz': {
-      'ja': 'Change Password',
-      'en': '',
+      'en': 'Change Password',
+      'ja': 'パスワードを変更する',
     },
     'gdpnyu1u': {
-      'ja': 'Enter your email',
-      'en': '',
+      'en': 'Enter your email',
+      'ja': 'メールアドレスを入力',
     },
     '8zibi18a': {
-      'ja':
+      'en':
           'We will send you an email with a link to reset your password, please enter the email associated with your account above.',
-      'en': '',
+      'ja':
+          'パスワードをリセットするためのリンクが記載されたメールをお送りします。上記のアカウントに関連付けられているメールアドレスを入力してください。',
     },
     'qg5nvvqy': {
-      'ja': 'Send Reset Link',
-      'en': '',
+      'en': 'Send Reset Link',
+      'ja': 'リセットリンクを送信',
     },
   },
   // createDogProfile_New
   {
     'c8pxs061': {
-      'ja': 'Create Dog Profile',
-      'en': '',
+      'en': 'Create Dog Profile',
+      'ja': '犬のプロフィールを作成する',
     },
     'okd4psxo': {
-      'ja':
+      'en':
           'Fill out your dog profiles below! And then get to sharing your pups!',
-      'en': '',
+      'ja': '以下にあなたの犬のプロフィールを記入してください！そして、あなたの子犬を共有するようになります！',
     },
     '2lwfp0wp': {
-      'ja': 'Dog Name',
-      'en': '',
+      'en': 'Dog Name',
+      'ja': '犬の名前',
     },
     'p0zephqw': {
-      'ja': 'Dog Breed',
-      'en': '',
+      'en': 'Dog Breed',
+      'ja': '犬種',
     },
     'agnk9g2u': {
-      'ja': 'Dog Age',
-      'en': '',
+      'en': 'Dog Age',
+      'ja': '犬の年齢',
     },
     'w43rjhbd': {
-      'ja': 'Add Pup',
-      'en': '',
+      'en': 'Add Pup',
+      'ja': '子犬を追加',
     },
   },
   // viewProfilePageOther
   {
     'y1naplz7': {
-      'ja': 'Message',
-      'en': '',
+      'en': 'Message',
+      'ja': 'メッセージ',
     },
     'f2kb16o4': {
-      'ja': 'Dog Profiles',
-      'en': '',
+      'en': 'Dog Profiles',
+      'ja': '犬のプロフィール',
     },
     '3r3wv83v': {
-      'ja': 'Posts',
-      'en': '',
+      'en': 'Posts',
+      'ja': '投稿',
     },
     '0e0a19iv': {
+      'en': '@username',
       'ja': '@username',
-      'en': '',
     },
     'w7zd6wvl': {
+      'en': '2,493',
       'ja': '2,493',
-      'en': '',
     },
     'ryn8abj1': {
+      'en': '4',
       'ja': '4',
-      'en': '',
     },
     'e10z4a7v': {
-      'ja':
+      'en':
           'I\'m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.⁣ ',
-      'en': '',
+      'ja': 'ファンのためだけにInstagramをすばやく再設計して戻ってきました。丸みを帯びた角とかわいいアイコン、他に何が必要か、ハハ。⁣',
     },
   },
   // chatPage
   {
     'frsmlihw': {
-      'ja': 'Group Chat',
-      'en': '',
+      'en': 'Group Chat',
+      'ja': 'グループチャット',
     },
   },
   // allChatsPage
   {
     '7ufrprq7': {
-      'ja': 'Messages',
-      'en': '',
+      'en': 'Messages',
+      'ja': 'メッセージ',
     },
   },
   // addChatUsers
   {
     '3jaegov4': {
-      'ja': 'Add Friends to chat',
-      'en': '',
+      'en': 'Add Friends to chat',
+      'ja': 'チャットに友達を追加',
     },
     'gy253yz5': {
-      'ja': 'Select the friends to add to chat.',
-      'en': '',
+      'en': 'Select the friends to add to chat.',
+      'ja': 'チャットに追加する友達を選択します。',
     },
     'di8p2cfk': {
-      'ja': 'Search for friends...',
-      'en': '',
+      'en': 'Search for friends...',
+      'ja': '友達を探す...',
     },
     'pscdl7kg': {
-      'ja': 'Invite to Chat',
-      'en': '',
+      'en': 'Invite to Chat',
+      'ja': 'チャットに招待する',
     },
   },
   // createGroupChat
   {
     '2n6pand2': {
-      'ja': 'Create Group Chat',
-      'en': '',
+      'en': 'Create Group Chat',
+      'ja': 'グループチャットを作成する',
     },
     '72n59taj': {
-      'ja': 'Select the friends to add to chat.',
-      'en': '',
+      'en': 'Select the friends to add to chat.',
+      'ja': 'チャットに追加する友達を選択します。',
     },
     '4jmpily6': {
-      'ja': 'Search for friends...',
-      'en': '',
+      'en': 'Search for friends...',
+      'ja': '友達を探す...',
     },
     '084be3fr': {
-      'ja': 'Create Chat',
-      'en': '',
+      'en': 'Create Chat',
+      'ja': 'チャットを作成する',
     },
   },
   // comments
   {
     'syu33tfz': {
-      'ja': 'Comments',
-      'en': '',
+      'en': 'Comments',
+      'ja': 'コメントコメント',
     },
     'cb431kck': {
-      'ja': 'Posted',
-      'en': '',
+      'en': 'Posted',
+      'ja': '投稿',
     },
     'nffccvqo': {
-      'ja': 'Comment here...',
-      'en': '',
+      'en': 'Comment here...',
+      'ja': 'ここにコメント...',
     },
     '0vdocnid': {
-      'ja': 'Post',
-      'en': '',
+      'en': 'Post',
+      'ja': '役職',
     },
   },
   // createModal
   {
     'gxi2ng34': {
-      'ja': 'Create Story',
-      'en': '',
+      'en': 'Create Story',
+      'ja': 'ストーリーを作成する',
     },
     'zfce1io5': {
-      'ja': 'Share a video of your pup.',
-      'en': '',
+      'en': 'Share a video of your pup.',
+      'ja': 'あなたの子犬のビデオを共有します。',
     },
     '26l31upz': {
-      'ja': 'Create Post',
-      'en': '',
+      'en': 'Create Post',
+      'ja': '投稿を作成',
     },
     'l7dgfxxk': {
-      'ja': 'Share a photo that will appear in the timeline.',
-      'en': '',
+      'en': 'Share a photo that will appear in the timeline.',
+      'ja': 'タイムラインに表示される写真を共有します。',
     },
     '48nktk87': {
-      'ja': 'Create Post',
-      'en': '',
+      'en': 'Create Post',
+      'ja': '投稿を作成',
     },
     'dsfd50u8': {
-      'ja': 'Share photos on your timeline.',
-      'en': '',
+      'en': 'Share photos on your timeline.',
+      'ja': 'タイムラインで写真を共有します。',
     },
   },
   // deletePost
   {
     '1gz3v85v': {
-      'ja': 'Delete Post',
-      'en': '',
+      'en': 'Delete Post',
+      'ja': '投稿を削除',
     },
     '9u3m5h59': {
-      'ja': 'Cancel',
-      'en': '',
+      'en': 'Cancel',
+      'ja': 'キャンセル',
     },
   },
   // deleteStory
   {
     '1jevukmb': {
-      'ja': 'Delete Story',
-      'en': '',
+      'en': 'Delete Story',
+      'ja': 'ストーリーを削除',
     },
     '2bnw1f6a': {
-      'ja': 'Cancel',
-      'en': '',
+      'en': 'Cancel',
+      'ja': 'キャンセル',
     },
   },
   // Miscellaneous
   {
     'rma7kfh4': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     '8ap8k4ns': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'krwtivsv': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'e6z2adp1': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'vnbg9cs3': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'r48cbcwe': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     '2igp658h': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'lzc4j09n': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'u5rm0hzn': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'jcf6yiqr': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     '07fqau9k': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'o2jjjf6b': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     '4kp1rvli': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'cil5jzl0': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     'p05hkwr5': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     '1k7hif19': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
     '6afiloxb': {
-      'ja': '',
       'en': '',
+      'ja': '',
     },
   },
 ].reduce((a, b) => a..addAll(b));
